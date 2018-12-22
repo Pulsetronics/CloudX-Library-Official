@@ -52,6 +52,11 @@ loop(){
 }
 */
 
+#ifndef _LIBRARY_H
+#include <CloudX\library.h>
+#endif
+
+
 
 #ifndef _HC595_H_
 #define _HC595_H_

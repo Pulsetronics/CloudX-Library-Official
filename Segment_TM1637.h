@@ -52,6 +52,10 @@ setup(){
       
 */   
 
+#ifndef _LIBRARY_H
+#include <CloudX\library.h>
+#endif
+
 #ifndef _TM1637_H_
 #define _TM1637_H_
 

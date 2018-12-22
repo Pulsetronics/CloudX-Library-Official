@@ -83,6 +83,9 @@ setup(){
   }
 }
 */
+#ifndef _LIBRARY_H
+#include <CloudX\library.h>
+#endif
 
 
  #ifndef _EEPROM_I2C_H_

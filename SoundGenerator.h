@@ -56,6 +56,10 @@ setup(){
 
 */
 
+#ifndef _LIBRARY_H
+#include <CloudX\library.h>
+#endif
+
 
 #ifndef _SoundGen_H_
 #define _SoundGen_H_ 

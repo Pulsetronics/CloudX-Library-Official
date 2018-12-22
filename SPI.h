@@ -96,6 +96,10 @@ setup(){
 
 */
 
+#ifndef _LIBRARY_H
+#include <CloudX\library.h>
+#endif
+
 
 #ifndef _SPI_H_
 #define _SPI_H_

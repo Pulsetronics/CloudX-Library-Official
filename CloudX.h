@@ -55,5 +55,5 @@ and that both those copyright notices and this permission notice appear in suppo
 #pragma config CP = OFF         // Flash Program Memory Code Protection bit (Code protection off)
 
 #include  <xc.h>
-#include <CloudX/libr.h>
+#include <CloudX/library.h>
 

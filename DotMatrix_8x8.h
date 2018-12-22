@@ -55,7 +55,11 @@ setup(){
 
 */
 
-		 
+
+#ifndef _LIBRARY_H
+#include <CloudX\library.h>
+#endif
+	 
 #ifndef _DotMatrix_8x8_H_		 
 #define _DotMatrix_8x8_H_
 

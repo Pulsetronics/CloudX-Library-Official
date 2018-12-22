@@ -51,7 +51,11 @@ setup(){
     }
 
 }*/
-    
+
+#ifndef _LIBRARY_H
+#include <CloudX\library.h>
+#endif
+
 
 
 #ifndef _Ultrasonic_H_	

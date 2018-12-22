@@ -78,6 +78,10 @@ setup(){
 
 */
 
+#ifndef _LIBRARY_H
+#include <CloudX\library.h>
+#endif
+
 
 #ifndef _SIM800_H_
 #define _SIM800_H_

@@ -148,6 +148,11 @@ setup(){
 
 */
 
+#ifndef _LIBRARY_H
+#include <CloudX\library.h>
+#endif
+
+
 
 #ifndef _NECReceiver_H_
 #define _NECReceiver_H_

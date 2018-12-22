@@ -73,7 +73,9 @@ setup(){
 
 */
 
-
+#ifndef _LIBRARY_H
+#include <CloudX\library.h>
+#endif
 
 #ifndef _Bluetooth_HC05_H_
 #define _Bluetooth_HC05_H_

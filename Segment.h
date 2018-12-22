@@ -91,6 +91,9 @@ Example 2:  For A Single Segment Display
 
 */
 
+#ifndef _LIBRARY_H
+#include <CloudX\library.h>
+#endif
 
 
 #ifndef _Segment_H_

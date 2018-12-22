@@ -108,6 +108,13 @@ loop(){
 */
 
 
+#ifndef _LIBRARY_H
+#include <CloudX\library.h>
+#endif
+
+#ifndef _DHT11_H
+#define _DHT11_H
+
 
 #define ok 1
 #define error 0
@@ -160,3 +167,4 @@ void signalStart(){
          return _data;
  }
 
+#endif

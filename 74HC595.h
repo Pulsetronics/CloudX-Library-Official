@@ -64,6 +64,10 @@ setup(){
 */
 
 
+#ifndef _LIBRARY_H
+#include <CloudX\library.h>
+#endif
+
 #ifndef _74HC595_H_
 #define _74HC595_H_
 

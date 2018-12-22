@@ -115,6 +115,10 @@ loop()                                             *
                                                               
 ***************************************************************************************/
 
+#ifndef _LIBRARY_H
+#include <CloudX\library.h>
+#endif
+
 
 #ifndef _SoftwareSerial_H_
 #define _SoftwareSerial_H_

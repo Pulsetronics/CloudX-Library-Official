@@ -27,6 +27,10 @@ and without fee is hereby granted, provided that this copyright notices appear i
 and that both those copyright notices and this permission notice appear in supporting documentation.
 ******************************************************************************************************/
 
+#ifndef _LIBRARY_H
+#include <CloudX\library.h>
+#endif
+
 
 #ifndef _RandNum_H_
 #define _RandNum_H_

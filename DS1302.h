@@ -93,6 +93,9 @@ setup(){
 
 */
 
+#ifndef _LIBRARY_H
+#include <CloudX\library.h>
+#endif
 
 #ifndef _DS1302_H_
 #define _DS1302_H_

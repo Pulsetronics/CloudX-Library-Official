@@ -27,6 +27,11 @@ and that both those copyright notices and this permission notice appear in suppo
 **************************************************************************************************/
 
 
+#ifndef _LIBRARY_H
+#include <CloudX\library.h>
+#endif
+
+
 #ifndef _ST7735_H_
 #define _ST7735_H_
 
