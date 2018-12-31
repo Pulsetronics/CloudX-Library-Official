@@ -1,4 +1,45 @@
 
+/**************************************************************************
+
+CLOUDX PREPROCESSOR LIBRARY
+for identifying cloudx syntax
+Version: 	2.0 BETA
+Release date:	
+
+Author:
+(C)2017 Ayinde Olayiwola
+
+Modified:
+(C)2018 Ayinde Olayiwola
+
+Modified
+(C)2019 None
+
+FileName:     	library.h
+Dependencies:	None
+Compiler:  	CloudX C Compiler
+Company:        www.cloudx.ng | www.bytehubembed.com 
+Product:        CloudX microcontrollers
+
+You may NOT distribute or sell this code without explicit authorization
+
+* Warranty
+* 
+* THE SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS" WITHOUT
+* WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT
+* LIMITATION, ANY WARRANTY OF MERCHANTABILITY, FITNESS FOR A
+* PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT SHALL
+* WE ARE LIABLE FOR ANY INCIDENTAL, SPECIAL, INDIRECT OR
+* CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF
+* PROCUREMENT OF SUBSTITUTE GOODS, TECHNOLOGY OR SERVICES, ANY CLAIMS
+* BY THIRD PARTIES (INCLUDING BUT NOT LIMITED TO ANY DEFENSE
+* THEREOF), ANY CLAIMS FOR INDEMNITY OR CONTRIBUTION, OR OTHER
+* SIMILAR COSTS, WHETHER ASSERTED ON THE BASIS OF CONTRACT, TORT
+* (INCLUDING NEGLIGENCE), BREACH OF WARRANTY, OR OTHERWISE.
+*
+**************************************************************************/
+
+
 /*************************************************************
 *       The New CloudX Standardization for Libraries         *
 *            For Proper Documentation and Users              *
@@ -63,12 +104,6 @@
 #define cursorOn                cursor_on        
 #define cursorOff               cursor_off     
 
-#define LCD_setting       Lcd_setting
-#define LCD_writeText     Lcd_writeText
-#define LCD_write         Lcd_write
-#define LCD_writeCP       Lcd_writeCP
-#define LCD_writeTextCP   Lcd_writeTextCP
-#define LCD_cmd           Lcd_cmd
 
 
 
@@ -239,7 +274,6 @@ void delay(unsigned int dell){
 #define pin7 RB6
 #define pin8 RB7
 
-#if	defined(_M633_H) || defined(_PRISCILLA_4620_H)
 #define pin9 RD0
 #define pin10 RD1
 #define pin11 RD2
@@ -248,7 +282,7 @@ void delay(unsigned int dell){
 #define pin14 RD5
 #define pin15 RD6
 #define pin16 RD7
-#endif
+
 
 
 ////////////////////////////////////////////////////////////
@@ -274,7 +308,6 @@ void delay(unsigned int dell){
 #define pin7Mode  TRISB6
 #define pin8Mode  TRISB7
 
-#if	defined(_M633_H) || defined(_PRISCILLA_4620_H)
 #define pin9Mode   TRISD0
 #define pin10Mode  TRISD1
 #define pin11Mode  TRISD2
@@ -283,7 +316,7 @@ void delay(unsigned int dell){
 #define pin14Mode  TRISD5
 #define pin15Mode  TRISD6
 #define pin16Mode  TRISD7
-#endif
+
 
 /////////////////////////////////////////////////////////////
 // PWM PIN CONFIGURATION
@@ -297,17 +330,17 @@ void delay(unsigned int dell){
 
 portMode(unsigned char ports, unsigned char bits){
             if(ports is 1) TRISB= bits;
-			#if	defined(_M633_H) || defined(_PRISCILLA_4620_H)
+			
             if(ports is 2) TRISD= bits;
-			#endif
+			
             if(ports is 3) TRISC= bits;
 }
 
 portWrite(unsigned char ports, unsigned char bits){
             if(ports is 1) PORTB= bits;
-			#if	defined(_M633_H) || defined(_PRISCILLA_4620_H)
+			
             if(ports is 2) PORTD= bits;
-			#endif
+			
             if(ports is 3) PORTC= bits;
 }
 
@@ -322,7 +355,6 @@ PinSelect(char selPins, char segState){
         case 7:     if (segState) pin7=HIGH; else pin7=LOW; break;
         case 8:     if (segState) pin8=HIGH; else pin8=LOW; break;
 		
-		#if	defined(_M633_H) || defined(_PRISCILLA_4620_H)
         case 9:     if (segState) pin9=HIGH; else pin9=LOW; break;
         case 10:     if (segState) pin10=HIGH; else pin10=LOW; break;
         case 11:     if (segState) pin11=HIGH; else pin11=LOW; break;
@@ -331,7 +363,7 @@ PinSelect(char selPins, char segState){
         case 14:     if (segState) pin14=HIGH; else pin14=LOW; break;
         case 15:     if (segState) pin15=HIGH; else pin15=LOW; break;
         case 16:     if (segState) pin16=HIGH; else pin16=LOW; break;
-	    #endif
+
 		
 		case 17:     if (segState) PORTAbits.RA0 = HIGH; else PORTAbits.RA0 = LOW; break;
 		case 18:     if (segState) PORTAbits.RA1 = HIGH; else PORTAbits.RA1 = LOW; break;
@@ -356,7 +388,7 @@ void pinMode(char segPortSel, char stater){
         case 7:    if(stater==OUTPUT)   pin7Mode=OUTPUT;  else pin7Mode=INPUT; pin7=LOW;break;
         case 8:    if(stater==OUTPUT)   pin8Mode=OUTPUT;  else pin8Mode=INPUT; pin8=LOW;break;
 		
-		#if	defined(_M633_H) || defined(_PRISCILLA_4620_H)
+		
         case 9:    if(stater==OUTPUT)  pin9Mode=OUTPUT;  else pin9Mode=INPUT;   pin9=LOW;break;
         case 10:   if(stater==OUTPUT)  pin10Mode=OUTPUT;  else pin10Mode=INPUT; pin10=LOW;break;
         case 11:   if(stater==OUTPUT)  pin11Mode=OUTPUT;  else pin11Mode=INPUT; pin11=LOW;break;
@@ -365,7 +397,6 @@ void pinMode(char segPortSel, char stater){
         case 14:   if(stater==OUTPUT)  pin14Mode=OUTPUT;  else pin14Mode=INPUT; pin14=LOW;break;
         case 15:   if(stater==OUTPUT)  pin15Mode=OUTPUT;  else pin15Mode=INPUT; pin15=LOW;break;
         case 16:   if(stater==OUTPUT)  pin16Mode=OUTPUT;  else pin16Mode=INPUT; pin16=LOW;break;
-		#endif
 		
 		case 17:   if(stater==OUTPUT)  TRISAbits.TRISA0=OUTPUT;  else TRISAbits.TRISA0=INPUT; PORTAbits.RA0=LOW;break;
 		case 18:   if(stater==OUTPUT)  TRISAbits.TRISA1=OUTPUT;  else TRISAbits.TRISA1=INPUT; PORTAbits.RA1=LOW;break;
@@ -386,7 +417,7 @@ void pinMode(char segPortSel, char stater){
         case 7:     if (pin7 == HIGH) return HIGH; else return LOW; 
         case 8:     if (pin8 == HIGH) return HIGH; else return LOW; 
 		
-		#if	defined(_M633_H) || defined(_PRISCILLA_4620_H)
+		
         case 9:      if (pin9 == HIGH) return HIGH; else return LOW; 
         case 10:     if (pin10 == HIGH) return HIGH; else return LOW; 
         case 11:     if (pin11 == HIGH) return HIGH; else return LOW; 
@@ -395,8 +426,7 @@ void pinMode(char segPortSel, char stater){
         case 14:     if (pin14 == HIGH) return HIGH; else return LOW; 
         case 15:     if (pin15 == HIGH) return HIGH; else return LOW; 
         case 16:     if (pin16 == HIGH) return HIGH; else return LOW; 
-		#endif
-		
+	
 
 	    case 17:     if (PORTAbits.RA0 == HIGH) return HIGH; else return LOW; 
 		case 18:     if (PORTAbits.RA1 == HIGH) return HIGH; else return LOW; 

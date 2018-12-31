@@ -1,35 +1,45 @@
 
-/***************************************************************************************************
-                                   ByteHub Embedded
-****************************************************************************************************
- * File:     IR_NECReceiver.h
- * Version:  1.0
- * Author:   Oyemade Tumi
- * Created:  July 27, 2018, 2:20 PM
- * Website:  http://www.makeelectronics.ng or http://www.bytehubembed.com
- * Description: This file contains the program to demonstrate the NEC Infra-Red Receiver. 
+/**************************************************************************
 
-This code has been developed and tested on CloudX microcontroller boards.  
-We strongly believe that the library works on any of development boards for respective controllers. 
-Check this link http://www.makeelectronics.ng for awesome tutorials on CloudX,ARM,Robotics,RTOS,IOT.
-ByteHub Embedded invests substantial time and effort developing open source HW and SW tools,
-to support consider buying the CloudX microcontroller boards.
+INFRARED REMOTE RECIEVER LIBRARY
+for IR remote control
+Version: 		2.0 BETA
+Release date:	 July 27, 2018, 2:20 PM
+
+Author:
+(C)2017 Oyemade Tumi
+
+Modified:
+(C)2018 None
+
+FileName:     	IR_NECReceiver.h
+Dependencies:	None
+Compiler:  	CloudX C Compiler
+Company:        www.cloudx.ng | www.bytehubembed.com 
+Product:        CloudX microcontrollers
+
+You may NOT distribute or sell this code without explicit authorization
+
+* Warranty
+* 
+* THE SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS" WITHOUT
+* WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT
+* LIMITATION, ANY WARRANTY OF MERCHANTABILITY, FITNESS FOR A
+* PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. IN NO EVENT SHALL
+* WE ARE LIABLE FOR ANY INCIDENTAL, SPECIAL, INDIRECT OR
+* CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF
+* PROCUREMENT OF SUBSTITUTE GOODS, TECHNOLOGY OR SERVICES, ANY CLAIMS
+* BY THIRD PARTIES (INCLUDING BUT NOT LIMITED TO ANY DEFENSE
+* THEREOF), ANY CLAIMS FOR INDEMNITY OR CONTRIBUTION, OR OTHER
+* SIMILAR COSTS, WHETHER ASSERTED ON THE BASIS OF CONTRACT, TORT
+* (INCLUDING NEGLIGENCE), BREACH OF WARRANTY, OR OTHERWISE.
+*
+**************************************************************************/
+
+
+
  
-The ByteHub Embedded libraries and examples are licensed under the terms of the new-bsd license
-(two-clause bsd license). See also: http://www.opensource.org/licenses/bsd-license.php
-
-BYTEHUB EMEBEDED DISCLAIMS ANY KIND OF HARDWARE FAILURE RESULTING OUT OF USAGE OF LIBRARIES, DIRECTLY OR
-INDIRECTLY. FILES MAY BE SUBJECT TO CHANGE WITHOUT PRIOR NOTICE. THE REVISION HISTORY CONTAINS THE 
-INFORMATION RELATED TO UPDATES.
- 
-
-Permission to use, copy, modify, and distribute this software and its documentation for any purpose
-and without fee is hereby granted, provided that this copyright notices appear in all copies 
-and that both those copyright notices and this permission notice appear in supporting documentation.
-******************************************************************************************************/
-
- 
-/*
+/*************************************************************************
 
 Example:
 
@@ -146,7 +156,7 @@ setup(){
 }
 
 
-*/
+***************************************************************************/
 
 #ifndef _LIBRARY_H
 #include <CloudX\library.h>
